@@ -32,22 +32,3 @@ Legendre Symbol được sử dụng để tìm Quadratic Residues module p . Sa
   pow(a,(p+1)//4,p)
 </pre>
  
-# Last challenge
-<Pre>
-from Crypto.Util.number import bytes_to_long, long_to_bytes
-input =[...]
-p = 96517490730367252566551196176049957092195411726055764912412605750547823858339
-a = 1337
-list =[]
-def legendre(x,y):
-    return pow(x,(y-1)//2,y)
-for i in input:
-    if legendre(i,p) == 1:
-        list.append(0)
-    else:
-        list.append(1)
-
-result="".join(map(str,list))
-result=int(result,2)
-print(long_to_bytes(result))
-</Pre>
